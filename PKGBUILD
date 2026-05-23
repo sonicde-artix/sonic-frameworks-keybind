@@ -1,4 +1,5 @@
-# Maintainer: artist for Artix Linux
+# Maintainer: callmetango
+# Contributor: artist <artist@artixlinux.org>
 
 pkgname=sonic-frameworks-keybind
 pkgver=6.26.0
@@ -17,7 +18,8 @@ conflicts=('kglobalaccel')
 provides=('kglobalaccel')
 replaces=('kglobalaccel')
 groups=(sonicde-frameworks)
-source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/$pkgver.tar.gz")
+source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+sha256sums=('4c38636274cf99a068fc240082ecb0158b3b31545616267e85fefee1fc8e2f52')
 
 build() {
   cmake -B build -S $pkgname-$pkgver \
@@ -28,6 +30,3 @@ build() {
 package() {
   DESTDIR="$pkgdir" cmake --install build
 }
-
-sha256sums=('4c38636274cf99a068fc240082ecb0158b3b31545616267e85fefee1fc8e2f52')
-
