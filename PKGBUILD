@@ -3,7 +3,7 @@
 
 pkgname=sonic-frameworks-keybind
 pkgver=6.26.0
-pkgrel=1
+pkgrel=2
 pkgdesc='sonic-frameworks-keybind allows to have global accelerators that are independent of the focused window'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-frameworks-keybind'
