@@ -2,8 +2,8 @@
 # Contributor: artist <artist@artixlinux.org>
 
 pkgname=sonic-frameworks-keybind
-pkgver=6.26.0
-pkgrel=2
+pkgver=6.27.0
+pkgrel=1
 pkgdesc='sonic-frameworks-keybind allows to have global accelerators that are independent of the focused window'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-frameworks-keybind'
@@ -12,14 +12,14 @@ depends=(glibc
          libgcc
          qt6-base)
 makedepends=(doxygen
-             extra-cmake-modules
-             qt6-tools)
+             qt6-tools
+             sonic-frameworks-cmake-modules)
 conflicts=('kglobalaccel')
 provides=('kglobalaccel')
 replaces=('kglobalaccel')
 groups=(sonicde-frameworks)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('4c38636274cf99a068fc240082ecb0158b3b31545616267e85fefee1fc8e2f52')
+sha256sums=('d1edb69cee5ca8b6ca5177348f3e66c35da7f59f9bbbc8d1ee21a2d083e6680f')
 
 build() {
   cmake -B build -S $pkgname-$pkgver \
