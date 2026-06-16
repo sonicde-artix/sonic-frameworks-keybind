@@ -3,7 +3,7 @@
 
 pkgname=sonic-frameworks-keybind
 pkgver=6.27.0
-pkgrel=1
+pkgrel=2
 pkgdesc='sonic-frameworks-keybind allows to have global accelerators that are independent of the focused window'
 arch=(x86_64)
 url='https://github.com/Sonic-DE/sonic-frameworks-keybind'
@@ -23,6 +23,7 @@ sha256sums=('d1edb69cee5ca8b6ca5177348f3e66c35da7f59f9bbbc8d1ee21a2d083e6680f')
 
 build() {
   cmake -B build -S $pkgname-$pkgver \
+    -DCMAKE_INSTALL_LIBDIR=lib \
     -DBUILD_TESTING=OFF
   cmake --build build
 }
